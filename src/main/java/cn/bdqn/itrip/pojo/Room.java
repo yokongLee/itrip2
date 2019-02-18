@@ -30,7 +30,7 @@ public class Room {
     private Date checkoutTime;
     //入住时间
     private Date checkinTime;
-    //房间类型hj
+    //房间类型
     private String roomType;
 
     public Room() {
