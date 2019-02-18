@@ -28,10 +28,20 @@ public class Room {
     private Date modifyDate;
     //退房时间
     private Date checkoutTime;
-    //入住时间z
+    //入住时间
     private Date checkinTime;
+    //房间类型
+    private String roomType;
 
     public Room() {
+    }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
     }
 
     public Integer getrId() {
