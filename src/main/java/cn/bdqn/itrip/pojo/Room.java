@@ -28,7 +28,7 @@ public class Room {
     private Date modifyDate;
     //退房时间
     private Date checkoutTime;
-    //入住时间
+    //入住时间z
     private Date checkinTime;
 
     public Room() {
