@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.itrip.dao.UserMapper">
+    <!--根据账号和密码查询特定用户-->
+    <select id="getByUserCodeAndUserPassword"  resultType="User">
+        SELECT * FROM `user` WHERE `userCode`=#{userCode} AND`userPassword`=#{userPassword}
+    </select>
+
+    <!--增加用户-->
+    <insert id="add" parameterType="User">
+        INSERT INTO `user`(`userCode`,`userPassword`,`userType`,`userName`,`creatDate`,`createBy`)
+            VALUES(#{userCode},#{userPassword},2,#{userName},NOW(),1)
+    </insert>
+</mapper>

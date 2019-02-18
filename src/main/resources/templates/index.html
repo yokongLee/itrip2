@@ -1,0 +1,347 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Amaze UI Widget</title>
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="renderer" content="webkit"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../static/i/favicon.png"/>
+  <link rel="stylesheet" href="../static/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../static/css/app.css"/>
+</head>
+<body>
+<!-- Header -->
+<header data-am-widget="header" class="am-header am-header-default">
+  <h1 class="am-header-title">
+    <a href="#title-link">爱旅行</a>
+  </h1>
+</header>
+
+<!-- Menu -->
+<nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1">
+  <a href="javascript: void(0)" class="am-menu-toggle">
+    <i class="am-menu-toggle-icon am-icon-bars"></i>
+  </a>
+  <div class="am-offcanvas">
+    <div class="am-offcanvas-bar">
+      <ul class="am-menu-nav sm-block-grid-1">
+        <li class="am-parent">
+          <a href="##">公司</a>
+          <ul class="am-menu-sub am-collapse  sm-block-grid-2 ">
+            <li class="">
+              <a href="##">公司</a>
+            </li>
+            <li class="">
+              <a href="##">人物</a>
+            </li>
+            <li class="">
+              <a href="##">趋势</a>
+            </li>
+            <li class="">
+              <a href="##">投融资</a>
+            </li>
+            <li class="">
+              <a href="##">创业公司</a>
+            </li>
+            <li class="">
+              <a href="##">创业人物</a>
+            </li>
+            <li class="am-menu-nav-channel">
+              <a href="##" title="公司">进入栏目 &raquo;</a>
+            </li>
+          </ul>
+        </li>
+        <li class="am-parent">
+          <a href="##">人物</a>
+          <ul class="am-menu-sub am-collapse  sm-block-grid-3 ">
+            <li class="">
+              <a href="##">公司</a>
+            </li>
+            <li class="">
+              <a href="##">人物</a>
+            </li>
+            <li class="">
+              <a href="##">趋势</a>
+            </li>
+            <li class="">
+              <a href="##">投融资</a>
+            </li>
+            <li class="">
+              <a href="##">创业公司</a>
+            </li>
+            <li class="">
+              <a href="##">创业人物</a>
+            </li>
+          </ul>
+        </li>
+        <li class="am-parent">
+          <a href="#c3">趋势</a>
+          <ul class="am-menu-sub am-collapse am-avg-sm-4">
+            <li class="">
+              <a href="##">公司</a>
+            </li>
+            <li class="">
+              <a href="##">人物</a>
+            </li>
+            <li class="">
+              <a href="##">趋势</a>
+            </li>
+            <li class="">
+              <a href="##">投融资</a>
+            </li>
+            <li class="">
+              <a href="##">创业公司</a>
+            </li>
+            <li class="">
+              <a href="##">创业人物</a>
+            </li>
+            <li class="am-menu-nav-channel">
+              <a href="#c3" title="趋势">泥煤 &raquo;</a>
+            </li>
+          </ul>
+        </li>
+        <li class="am-parent">
+          <a href="##">投融资</a>
+          <ul class="am-menu-sub am-collapse am-avg-sm-3">
+            <li class="">
+              <a href="##">公司</a>
+            </li>
+            <li class="">
+              <a href="##">人物</a>
+            </li>
+            <li class="">
+              <a href="##">趋势</a>
+            </li>
+            <li class="">
+              <a href="##">投融资</a>
+            </li>
+            <li class="">
+              <a href="##">创业公司</a>
+            </li>
+            <li class="">
+              <a href="##">创业人物</a>
+            </li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="##">创业公司</a>
+        </li>
+        <li class="">
+          <a href="##">创业人物</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Slider -->
+<div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{"directionNav":false}'>
+  <ul class="am-slides">
+    <li>
+      <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg"/>
+    </li>
+    <li>
+      <img src="http://s.amazeui.org/media/i/demos/bing-2.jpg"/>
+    </li>
+    <li>
+      <img src="http://s.amazeui.org/media/i/demos/bing-3.jpg"/>
+    </li>
+    <li>
+      <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg"/>
+    </li>
+  </ul>
+</div>
+
+<!-- List -->
+<div data-am-widget="list_news" class="am-list-news am-list-news-default">
+  <!--列表标题-->
+  <div class="am-list-news-hd am-cf">
+    <!--带更多链接-->
+    <a href="###">
+      <h2>搜索酒店</h2>
+      <span class="am-list-news-more am-fr">更多 &raquo;</span>
+    </a>
+  </div>
+  <div class="am-list-news-bd">
+    <ul class="am-list">
+      <!--缩略图在标题左边-->
+      <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+
+        <div class="am-u-sm-8 am-list-main">
+          <div >
+            <div >
+              <form class="am-form am-form-horizontal" enctype="multipart/form-data" action="/hotel/index" method="post">
+                <input type="hidden" name="pageIndex" value="1" />
+                <div class="am-form-group">
+                  <label for="cId" class="am-u-sm-3 am-form-label">目的地</label>
+                  <div class="am-u-sm-9">
+                    <select name="cId" id="cId" >
+                      <option value="" >请选择</option>
+                      <option th:each="city:${cityList}" th:value="${city.cId}" th:text="${city.cityName}" th:selected="(${city.cId} == ${cId})"></option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="am-form-group">
+                  <label for="checkinTime" class="am-u-sm-3 am-form-label">入住时间</label>
+                  <div class="am-u-sm-9">
+                    <div class="am-form-group am-form-icon">
+                      <i class="am-icon-calendar"></i>
+                    <input type="date" class="am-form-field am-input-sm" placeholder="入住时间" id="checkinTime" name="checkinTime" th:value="${checkinTime}"/>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="am-form-group">
+                  <label for="checkoutTime" class="am-u-sm-3 am-form-label">退房时间</label>
+                  <div class="am-u-sm-9">
+                    <div class="am-form-group am-form-icon">
+                      <i class="am-icon-calendar"></i>
+                    <input type="date" class="am-form-field am-input-sm" placeholder="退房时间" id="checkoutTime" name="checkoutTime" th:value="${checkoutTime}"/>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="am-form-group">
+                  <label for="hotelName" class="am-u-sm-3 am-form-label">关键词</label>
+                  <div class="am-u-sm-9">
+                    <input id="hotelName" placeholder="输入关键词" name="hotelName" th:value="${hotelName}"/>
+                  </div>
+                </div>
+
+                <div class="am-form-group">
+                  <div class="am-u-sm-9 am-u-sm-push-3">
+                    <input type="submit" class="am-btn am-btn-primary" value="保存修改"/>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+
+<!-- Gallery -->
+<ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+  am-avg-md-3 am-avg-lg-4 am-gallery-default" data-am-gallery="{ pureview: true }" >
+  <p  th:each="hotel:${pageBean.list}" >
+  <li>
+    <div class="am-gallery-item">
+      <a href="http://s.amazeui.org/media/i/demos/bing-1.jpg"
+         class="">
+        <img th:src="@{${hotel.image}}" />
+        <h3 class="am-gallery-title" th:text="${hotel.hotelName}"></h3>
+        <div class="am-gallery-desc">欢迎度：<span th:text="${hotel.popularity}"></span></div>
+      </a>
+    </div>
+  </li></p>
+</ul>
+
+<!-- List -->
+<div data-am-widget="list_news" class="am-list-news am-list-news-default">
+  <!--列表标题-->
+  <div class="am-list-news-hd am-cf">
+    <!--带更多链接-->
+
+    <ul   class="am-gallery am-avg-sm-2">
+        <li class="paginate_button previous" th:if="${pageBean.pageIndex gt 1}"><a
+                href="javascript:page_nav(document.forms[0],1);"
+                aria-controls="datatable-responsive" data-dt-idx="0"
+                tabindex="0">首页</a>
+        </li>
+        <li class="paginate_button " th:if="${pageBean.pageIndex gt 1}"><a
+                th:href="@{'javascript:page_nav(document.forms[0],'+${pageBean.pageIndex-1}+');'}"
+                aria-controls="datatable-responsive" data-dt-idx="1"
+                tabindex="0">上一页</a>
+        </li>
+        <li class="paginate_button " th:if="${pageBean.pageIndex lt pageBean.pageCount}"><a
+                th:href="@{'javascript:page_nav(document.forms[0],'+${pageBean.pageIndex+1 }+');'}"
+                aria-controls="datatable-responsive" data-dt-idx="1"
+                tabindex="0">下一页</a>
+        </li>
+        <li class="paginate_button next" th:if="${pageBean.pageIndex lt pageBean.pageCount}"><a
+                th:href="@{'javascript:page_nav(document.forms[0],'+${pageBean.pageCount }+');'}"
+                aria-controls="datatable-responsive" data-dt-idx="7"
+                tabindex="0">最后一页</a>
+        </li>
+    </ul>
+
+    <a href="###">
+      <h2>栏目标题</h2>
+    </a>
+  </div>
+  <div class="am-list-news-bd">
+    <ul class="am-list">
+      <li class="am-g">
+        <a href="http://www.douban.com/online/11614662/" class="am-list-item-hd">我很囧，你保重....晒晒旅行中的那些囧！</a>
+      </li>
+      <li class="am-g">
+        <a href="http://www.douban.com/online/11624755/" class="am-list-item-hd">我最喜欢的一张画</a>
+      </li>
+      <li class="am-g">
+        <a href="http://www.douban.com/online/11645411/" class="am-list-item-hd">“你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！</a>
+      </li>
+    </ul>
+  </div>
+  <!--更多在底部-->
+  <div class="am-list-news-ft">
+    <a class="am-list-news-more am-btn am-btn-default" href="###">查看更多 &raquo;</a>
+  </div>
+</div>
+
+<!-- Navbar -->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default "
+     id="">
+  <ul class="am-navbar-nav am-cf am-avg-sm-4">
+    <li>
+      <a href="tel:123456789">
+        <span class="am-icon-phone"></span>
+        <span class="am-navbar-label">呼叫</span>
+      </a>
+    </li>
+    <li>
+      <a href="###">
+        <span class="am-icon-share-square-o"></span>
+        <span class="am-navbar-label">分享</span>
+      </a>
+    </li>
+    <li>
+      <a href="###">
+        <span class="am-icon-qrcode"></span>
+        <span class="am-navbar-label">二维码</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/allmobilize/amazeui">
+        <span class="am-icon-github"></span>
+        <span class="am-navbar-label">GitHub</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://amazeui.org/getting-started">
+        <span class="am-icon-download"></span>
+        <span class="am-navbar-label">下载使用</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/allmobilize/amazeui/issues">
+        <span class="am-icon-location-arrow"></span>
+        <span class="am-navbar-label">Bug 反馈</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<script src="../static/js/rollpage.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+</body>
+</html>

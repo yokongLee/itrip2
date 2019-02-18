@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.itrip.dao.HotelMapper">
+
+    <!--增加酒店-->
+    <insert id="add" parameterType="Hotel">
+        INSERT INTO `hotel`(`cId`,`details`,`popularity`,`image`,`hotelName`,`createBy`,`createDate`)
+          VALUES(#{cId},#{details},#{popularity},#{image},#{hotelName},1,NOW())
+    </insert>
+
+    <!--根据酒店名  城市id  房间退房时间 模糊分页查询-->
+    <select id="getByHotelNameAndCIdAndCheckoutTime" resultType="Hotel">
+        SELECT h.* FROM `room` r,`hotel` h,`city` c
+            <trim prefix="WHERE" prefixOverrides="and|or">
+                r.`hId`=h.`hId`
+                AND c.`cId`=h.`cId`
+                <if test="checkinTime !=null">
+                    #{checkinTime}>r.`checkoutTime`
+                </if>
+                <if test="cId != null">
+                    AND c.`cId`=#{cId}
+                </if>
+                <if test="hotelName !=null and hotelName !=''">
+                AND h.`hotelName` LIKE CONCAT('%',#{hotelName},'%')
+                </if>
+
+            </trim>
+            ORDER BY `popularity` DESC LIMIT #{startRow},#{pageSize}
+    </select>
+
+    <!--根据酒店名  城市id  房间退房时间 查询总数-->
+    <select id="getCountByHotelNameAndCIdAndCheckoutTime" resultType="int">
+        SELECT COUNT(1) FROM `room` r,`hotel` h,`city` c
+        <trim prefix="WHERE" prefixOverrides="and|or">
+            r.`hId`=h.`hId`
+            AND c.`cId`=h.`cId`
+            <if test="checkinTime !=null">
+                AND #{checkinTime}>r.`checkoutTime`
+            </if>
+            <if test="cId != null">
+                AND c.`cId`=#{cId}
+            </if>
+            <if test="hotelName !=null and hotelName !=''">
+                AND h.`hotelName` LIKE CONCAT('%',#{hotelName},'%')
+            </if>
+
+        </trim>
+    </select>
+</mapper>
